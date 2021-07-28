@@ -1,0 +1,37 @@
+@@include('./html-templates/header/header.html')
+
+@@include('./html-templates/header/nav.html', {
+  'ind-active':'active',
+  'serv-active':' ',
+  'cont-active':' '
+})
+
+<main class="main">
+
+  <!-- hero section -->
+  @@include('./html-templates/index/ind-hero.html')
+
+    <!-- our services section-->
+    @@include('./html-templates/index/ind-services.html')
+
+    <!-- about us section -->
+    @@include('./html-templates/index/ind-about.html')
+
+    <!-- our latest projects section -->
+    @@include('./html-templates/index/ind-projects.html')
+
+    <!-- contact us section -->
+    @@include('./html-templates/index/ind-contact.html')
+
+    <!-- out testimonials section -->
+    @@include('./html-templates/index/ind-testimonial.html')
+</main>
+
+<!-- footer section -->
+@@include('./html-templates/footer/footer.html')
+
+<script src="js/main.js"></script>
+
+</body>
+
+</html>

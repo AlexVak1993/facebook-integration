@@ -1,0 +1,65 @@
+body {
+  font-family: $font-main;
+  font-size: $font-size;
+  color: $color-text-main;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  text-align: center;
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.2;
+
+  @include md {
+    font-size: 3rem;
+  }
+
+  @include xl {
+    font-size: 4rem;
+  }
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  line-height: 1.2;
+
+  @include md {
+    font-size: 2.5rem;
+  }
+
+  @include xl {
+    font-size: 3rem;
+  }
+}
+
+h5 {
+  font-size: 1.125rem;
+  font-weight: 600;
+
+  @include md {
+    font-size: 1.25rem;
+  }
+}
+
+p:not(:last-of-type) {
+  margin-bottom: .75rem;
+}

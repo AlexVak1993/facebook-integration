@@ -1,0 +1,79 @@
+@@include('./html-templates/header/header.html' )
+
+@@include('./html-templates/header/nav.html', {
+'ind-active':' ',
+'serv-active':'active',
+'cont-active':' '
+})
+
+<main class="main">
+
+  <!-- services hero section -->
+  @@include('./html-templates/services/serv-hero.html')
+
+
+  <div class="tabs">
+    <!-- tabs navigation -->
+    @@include('./html-templates/services/tabs-nav.html')
+
+    <!-- tabs content -->
+    <div class="container">
+      <div class="tabs__content" data-tab='1'>
+        @@include('./html-templates/repeated-items/tab-content.html',{
+          title:'Floor tiling',
+          id:'tab-img-wrap-1',
+          'btn-id':'load-more-1'
+        })
+      </div>
+      <div class="tabs__content" data-tab='2'>
+        @@include('./html-templates/repeated-items/tab-content.html',{
+          title:'Wall tiles',
+          id:'tab-img-wrap-2',
+          'btn-id':'load-more-2'
+        })
+      </div>
+      <div class="tabs__content" data-tab='3'>
+        @@include('./html-templates/repeated-items/tab-content.html',{
+          title:'Terraces',
+          id:'tab-img-wrap-3',
+          'btn-id':'load-more-3'
+        })
+      </div>
+      <div class="tabs__content" data-tab='4'>
+        @@include('./html-templates/repeated-items/tab-content.html',{
+          title:'Floor slabs',
+          id:'tab-img-wrap-4',
+          'btn-id':'load-more-4'
+        })
+      </div>
+      <div class="tabs__content" data-tab='5'>
+        @@include('./html-templates/repeated-items/tab-content.html',{
+          title:'Laminate & Parquet',
+          id:'tab-img-wrap-5',
+          'btn-id':'load-more-5'
+        })
+      </div>
+      <div class="tabs__content" data-tab='6'>
+        @@include('./html-templates/repeated-items/tab-content.html',{
+          title:'Resin floors',
+          id:'tab-img-wrap-6',
+          'btn-id':'load-more-6'
+        })
+      </div>
+    </div>
+  </div>
+
+</main>
+
+@@include('./html-templates/footer/footer.html')
+
+<!-- ACCESS_TOKEN and page-id for facebook integration -->
+<script>
+  const ACCESS_TOKEN = "EAAVhyOjkY70BADpcOHUxuMDdjg57bm8VBvlbroSCk0PmElGinKUZAAAbl7RPXdJZCX4hTjKshIpaCEANf6CLOHtUDkJqgOjiGfgT8hzcJSZAjotoqKcKXfiiaDFY13MW4gskcIHMYGNscOQenc3tRQo3EOTZC27GjiKaiG7BeeJMvwzZCthNN";
+  const PAGE_ID = "104648128546415";
+</script>
+<script src="js/main.js"></script>
+<script src="js/services-tab.js"></script>
+</body>
+
+</html>

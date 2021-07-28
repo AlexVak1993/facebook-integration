@@ -1,0 +1,63 @@
+.hero {
+  margin-bottom: $gap;
+  padding: $gap*4.5 0 $gap*8;
+  background-color: #d1b198;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+  color: $color-light;
+  z-index: 1;
+  text-align: center;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(30, 30, 30, 0.5);
+    z-index: -1;
+  }
+
+  &__tittle {
+    max-width: 85%;
+    margin: 0 auto $gap;
+  }
+
+  p {
+    margin-bottom: $gap*2;
+    font-weight: 500;
+
+    @include xl {
+      font-size: 1.25rem;
+    }
+  }
+
+  &__btns {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    @include md {
+      flex-direction: row;
+    }
+
+    a {
+      margin-bottom: $gap/2;
+
+      @include md {
+        &:not(:last-of-type) {
+          margin-right: $gap;
+        }
+      }
+    }
+  }
+
+  &--tiny {
+    padding: $gap*4.5 0;
+    margin-bottom: 0;
+  }
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<title>BVBA M.Delaere</title>
+	<link rel="stylesheet" href="css/main.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600&display=swap" rel="stylesheet">
+	<!-- <link rel="shortcut icon" type="image/png" href="images/icons/favicon.png"> -->
+</head>
+
+<body class="body">
+	<div class="header-place"></div>
+	<header class="header">
+		@@include('./contact.html', {
+			class: 'tab'
+		})
+		<div class="header__content">
+			<div class="header__logo-container">
+				<a href="index.html" class="header__logo">
+					<img style="width: 50px;" src="images/icons/logoMD.png" alt="bvba m-delaere logo">
+					<img style="padding-left: 20px;" src="images/icons/logoMD-text.png" alt="bvba m-delaere logo">
+					<!-- <span style="white-space: nowrap;">BVBA M.DELAERE</span> -->
+				</a>
+				<button class="nav__burger">
+					<span class="nav__burger__row"></span>
+					<span class="nav__burger__row"></span>
+					<span class="nav__burger__row"></span>
+				</button>
+			</div>

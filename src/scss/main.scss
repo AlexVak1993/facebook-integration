@@ -1,0 +1,27 @@
+@import 'variables';
+@import 'components/base';
+@import 'components/grid';
+@import 'components/typography';
+
+@import 'components/ui/button';
+@import 'components/ui/section-description-header';
+
+@import 'components/header/header';
+@import 'components/header/nav';
+@import 'components/header/contact';
+
+@import 'components/footer/footer';
+
+@import 'components/hero/hero.scss';
+@import 'components/index/ind-services';
+@import 'components/index/ind-about';
+@import 'components/index/ind-projects';
+@import 'components/index/ind-contact';
+@import 'components/index/ind-testimonial';
+
+@import 'components/services/dropdown';
+@import 'components/services/tabs';
+@import 'components/services/tabs-content';
+
+@import 'components/contact/contact-form';
+@import 'components/contact/contact-map';

@@ -1,0 +1,120 @@
+.contact-form {
+  background-color: #F0F0F0;
+
+  @include md {
+    padding-top: 60px;
+  }
+
+  &__description {
+    text-align: center;
+    margin-bottom: $gap;
+
+    @include md {
+      margin-bottom: $gap*3;
+    }
+
+    p {
+      max-width: 80%;
+      margin: 0 auto;
+      color: $color-text-sub;
+
+      @include md {
+        max-width: 60%;
+      }
+
+      @include lg {
+        max-width: 48%;
+      }
+
+      @include xl {
+        max-width: 60%;
+        font-size: 1.25rem;
+      }
+    }
+  }
+
+  &__container {
+    max-width: 580px;
+    margin: 0 auto;
+
+    input[type=text],
+    input[type=email],
+    select,
+    textarea {
+      width: 100%;
+      padding: 8px 14px;
+      border: 1px solid transparent;
+      border-radius: 4px;
+      margin-top: 6px;
+      margin-bottom: 16px;
+      font-family: $font-main;
+      font-size: 1rem;
+      line-height: 1.75;
+      color: $color-text-sub;
+    }
+
+    input[type=text] {
+      @include md {
+        margin-right: 20px;
+      }
+    }
+
+    select {
+      height: 46px;
+      cursor: pointer;
+      appearance: none;
+    }
+
+    textarea {
+      resize: none;
+      min-height: 100px;
+    }
+  }
+
+  &__name {
+    display: flex;
+    flex-direction: column;
+
+    @include md {
+      flex-direction: row;
+    }
+  }
+
+  &__select {
+    position: relative;
+    margin-top: 6px;
+    margin-bottom: 16px;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: 18px;
+      transform: translateY(-50%) rotate(90deg);
+      width: 10px;
+      height: 10px;
+      background-image: url('../images/icons/chevron.svg');
+    }
+
+    select {
+      margin-top: 0;
+      margin-bottom: 0;
+      padding: 8px 28px 8px 14px;
+    }
+  }
+
+  &__btn {
+    text-align: center;
+
+    @include md {
+      margin-top: $gap;
+    }
+
+    .main-cta {
+      margin: 0 auto;
+      font-family: $font-main;
+      font-size: 1rem;
+      padding: 14px 30px;
+    }
+  }
+}

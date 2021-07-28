@@ -1,0 +1,77 @@
+.ind-services {
+  padding: 30px 0;
+
+  @include md {
+    padding: 70px 0;
+  }
+
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+
+    @include md {
+      margin: -16px -10px 24px;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+  }
+
+  &__item {
+    margin: 16px 0px;
+    flex: 0 0 100%;
+    background: $color-light;
+    box-shadow: 0px 6px 20px rgba(30, 30, 30, 0.08);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: box-shadow .3s;
+
+    @include md {
+      margin: 16px 10px;
+      flex: 0 0 calc(50% - 20px);
+    }
+
+    &:hover {
+      box-shadow: 0px 6px 20px rgba(30, 30, 30, 0.28);
+
+      .ind-services__img img {
+        transform: scale(1.05);
+      }
+    }
+  }
+
+  &__img {
+    height: 200px;
+    display: flex;
+    overflow: hidden;
+
+    @include sm {
+      height: 300px;
+    }
+    @include md {
+      height: 200px;
+    }
+
+    img {
+      transition: transform .3s;
+    }
+  }
+
+  &__content {
+    padding: 20px;
+
+    p {
+      font-weight: 500;
+    }
+  }
+
+  &__btn {
+    text-align: center;
+    margin-bottom: 20px;
+
+    a {
+      margin: 0 auto;
+    }
+  }
+}

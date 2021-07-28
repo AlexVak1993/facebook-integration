@@ -1,0 +1,80 @@
+.ind-about {
+  background-color: #F0F0F0;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+
+    @include md {
+      flex-direction: row;
+    }
+  }
+
+  &__img {
+    width: 70%;
+    margin: 0 auto 40px;
+    flex: 0 0 45%;
+    display: flex;
+    position: relative;
+    z-index: 1;
+
+    @include sm {
+      width: 50%;
+    }
+    @include md {
+      width: auto;
+      margin-bottom: 0;
+    }
+
+    &::before {
+      position: absolute;
+      content: '';
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #86A4F6;
+      z-index: -1;
+      transform: translateX(-20px) translateY(20px);
+      border-radius: 10px;
+
+      @include xl {
+        transform: translateX(-80px) translateY(60px);
+
+      }
+    }
+
+    img {
+      border-radius: 10px;
+    }
+  }
+
+  &__description {
+
+    @include md {
+      padding-left: $gap;
+    }
+
+    @include xl {
+      padding-left: $gap*3;
+    }
+    h2 {
+      @include md {
+        text-align: left;
+      }
+    }
+
+    p {
+      line-height: 2;
+    }
+  }
+
+  &__btn {
+    margin: 20px 0;
+    text-align: center;
+
+    @include md {
+      text-align: left;
+    }
+  }
+}

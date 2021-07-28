@@ -1,0 +1,39 @@
+.ind-contact {
+  padding: $gap*2.5 0;
+  background-color: $color-accent;
+
+  @include md {
+    padding: $gap*3.5 0;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+
+    @include md {
+      flex-direction: row;
+      justify-content: space-around;
+    }
+  }
+
+  h2 {
+    color: $color-light;
+
+    @include md {
+      margin-bottom: 0;
+    }
+  }
+
+  &__btn {
+    margin: 0 auto;
+    text-align: center;
+    
+    @include md {
+      margin: 0;
+    }
+
+    .main-cta {
+      padding: 14px 30px;
+    }
+  }
+}

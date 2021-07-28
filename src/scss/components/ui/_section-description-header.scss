@@ -1,0 +1,18 @@
+.section-description {
+  text-align: center;
+  max-width: 580px;
+  margin: 0 auto $gap*1.5;
+
+  @include md {
+    margin: 0 auto $gap*3;
+  }
+
+  p {
+    font-weight: 500;
+    color: $color-text-sub;
+
+    @include xl {
+      font-size: 1.25rem;
+    }
+  }
+}

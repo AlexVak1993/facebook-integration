@@ -1,0 +1,116 @@
+.tabs-content {
+
+  &__wrap {
+
+    @include md {
+      display: flex;
+    }
+
+    h5 {
+      text-align: center;
+      font-weight: 600;
+
+      @include md {
+        text-align: left;
+      }
+    }
+  }
+
+  &__description {
+    margin-bottom: $gap;
+    margin-right: $gap;
+    line-height: 2;
+
+    @include md {
+      margin-bottom: 0;
+    }
+
+    @include xl {
+      margin-right: $gap*3;
+    }
+
+    ul {
+      margin: $gap 0;
+      list-style: none;
+
+      @include md {
+        margin: $gap*2 0;
+      }
+
+      li {
+        padding-left: 28px;
+        position: relative;
+
+        &:not(:last-of-type) {
+          margin-bottom: $gap;
+        }
+
+        &::before {
+          content: '';
+          position: absolute;
+          top: 3px;
+          left: 0;
+          height: 18px;
+          width: 18px;
+          background-image: url('../images/icons/list-marker.svg');
+          background-repeat: no-repeat;
+          background-size: contain;
+        }
+      }
+    }
+  }
+
+  &__btn {
+    text-align: center;
+
+    @include md {
+      text-align: left;
+    }
+  }
+
+  &__projects {
+    flex-basis: 85%;
+    
+    @include xl {
+      margin-right: -100px;
+    }
+  }
+
+  &__images-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    @include md {
+      margin-bottom: $gap;
+    }
+  }
+
+  &__img {
+    margin-bottom: $gap;
+    flex-basis: calc(50% - 10px);
+    border-radius: 8px;
+    overflow: hidden;
+
+    &--hide {
+      display: none;
+    }
+    &--show {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  &__link {
+    
+    button {
+      border: none;
+      background-color: transparent;
+      font-family: $font-main;
+      font-size: 1rem;
+      color: $color-accent;
+      text-decoration: underline;
+    }
+  }
+}

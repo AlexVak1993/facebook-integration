@@ -1,0 +1,125 @@
+.footer {
+  &-top {
+    max-width: $main-container;
+    padding: $gap*1.5 $gap;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+
+    @include md {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    &__logo {
+      display: flex;
+      justify-content: center;
+      margin-bottom: $gap;
+
+      @include md {
+        margin-bottom: 0;
+      }
+
+      img {
+        width: auto;
+      }
+    }
+
+    &__nav {
+      ul {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        list-style: none;
+
+        li {
+          font-weight: 400;
+          font-size: 1.125rem;
+          transition: color .3s,
+            text-shadow .2s;
+
+          &:not(:last-of-type) {
+            margin-right: $gap;
+
+            @include md {
+              margin-right: $gap*2.5;
+            }
+          }
+
+          &:hover {
+            color: $color-accent;
+            text-shadow: 1px 0 0 $color-accent;
+          }
+
+
+          @include md {
+            width: auto;
+            position: relative;
+
+            &::after {
+              content: '';
+              position: absolute;
+              bottom: 0;
+              left: 0;
+              width: 0%;
+              height: 2px;
+              background-color: $color-accent;
+              transition: .3s;
+            }
+
+            &:hover {
+              &::after {
+                width: 100%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &-bottom {
+    background-color: #F0F0F0;
+
+    &__container {
+      max-width: $main-container;
+      padding: $gap;
+      margin: 0 auto;
+    }
+
+    &__list {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      list-style: none;
+    }
+
+    &__item {
+      margin: $gap/4 $gap;
+
+      @include lg {
+        margin: $gap/4 $gap*1.5;
+      }
+      
+      svg {
+        vertical-align: middle;
+        margin-right: 15px;
+      }
+
+      a {
+        transition: color .3s;
+
+        &:hover {
+          color: $color-accent;
+          text-decoration: underline;
+        }
+      }
+    }
+
+    &__fb {
+      a {
+        color: $color-accent;
+      }
+    }
+  }
+}

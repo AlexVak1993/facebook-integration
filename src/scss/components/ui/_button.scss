@@ -1,0 +1,40 @@
+.main-cta {
+  display: inline-block;
+  min-width: 220px;
+  padding: 14px 20px;
+  font-weight: 600;
+  line-height: 1.2;
+  border-radius: 4px;
+  color: $color-light;
+  box-sizing: border-box;
+  transition: box-shadow .3s;
+
+  @include md {
+    min-width: auto;
+  }
+
+  &:hover {
+    box-shadow: 0 0 8px rgba($color-light, .8)
+  }
+
+  &--filled {
+    background-color: $color-accent;
+    border: 1px solid $color-accent;
+  }
+
+  &--filled-inv {
+    background-color: $color-light;
+    border: 1px solid $color-light;
+    color: $color-accent;
+  }
+
+  &--bordered {
+    border: 1px solid $color-light;
+  }
+
+  &--dark-hov {
+    &:hover {
+      box-shadow: 0 0 8px rgba($color-text-main, .8)
+    }
+  }
+}

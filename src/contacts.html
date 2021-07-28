@@ -1,0 +1,24 @@
+@@include('./html-templates/header/header.html' )
+
+@@include('./html-templates/header/nav.html', {
+  'ind-active':' ',
+  'serv-active':' ',
+  'cont-active':'active'
+})
+
+<main class="main">
+  <!-- contacts hero section -->
+  @@include('./html-templates/contacts/cont-hero.html')
+
+  <!-- howcan we be of service to you (form section) -->
+  @@include('./html-templates/contacts/cont-form.html')
+
+  @@include('./html-templates/contacts/cont-map.html')
+</main>
+
+@@include('./html-templates/footer/footer.html')
+
+<script src="js/main.js"></script>
+
+</body>
+</html>
